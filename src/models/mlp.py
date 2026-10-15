@@ -25,6 +25,10 @@ import torch.nn as nn
 class MLP(nn.Module):
     def __init__(self, in_dim: int, hidden: list[int], dropout: float = 0.3, prior: float = 0.5):
         super().__init__()
+        
+        for h in hidden:
+          nn.Linear()
+
         raise NotImplementedError("TASK 2: build the layers")
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
